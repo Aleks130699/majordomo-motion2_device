@@ -37,7 +37,8 @@ if ($is_blocked) {
 }
 
 $resetNobodysHome=$this->getProperty('resetNobodysHome');
-if ($nobodyhome_timeout && !$resetNobodysHome) {
+$noTimeNobodysHome=$this->getProperty('noTimeNobodysHome');
+if ($nobodyhome_timeout && !$resetNobodysHome && !$noTimeNobodysHome) {
     setTimeOut('nobodyHome', "callMethodSafe('NobodyHomeMode.activate');", $nobodyhome_timeout);
 } elseif ($resetNobodysHome) {
     clearTimeout('nobodyHome');
@@ -46,7 +47,7 @@ if ($nobodyhome_timeout && !$resetNobodysHome) {
 $linked_room = $this->getProperty('linkedRoom');
 if ($linked_room) {
     callMethodSafe($linked_room . '.onActivity', array('sensor' => $ot));
-} elseif ($nobodysHome) {
+} elseif ($nobodysHome && !$noTimeNobodysHome) {
     callMethodSafe('NobodyHomeMode.deactivate', array('sensor' => $ot, 'room' => $linked_room));
 }
 
