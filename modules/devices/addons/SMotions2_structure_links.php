@@ -79,8 +79,13 @@ $this->device_links=array(
                     'PARAM_TYPE'=>'num'
                 ),
 				array(
-                    'PARAM_NAME'=>'darktime_level',
-                    'PARAM_TITLE'=>'Разная яркость днем и ночью',
+                    'PARAM_NAME'=>'action_level',
+                    'PARAM_TITLE'=>'Яркость',
+                    'PARAM_TYPE'=>'num'
+                ),
+				array(
+                    'PARAM_NAME'=>'night_mode',
+                    'PARAM_TITLE'=>'Разная яркость и время днем и ночью',
                     'PARAM_TYPE'=>'select',
                     'PARAM_OPTIONS'=>array(
                         array('TITLE'=>LANG_NO,'VALUE'=>'0'),
@@ -88,8 +93,8 @@ $this->device_links=array(
                     )
                 ),
 				array(
-                    'PARAM_NAME'=>'action_level',
-                    'PARAM_TITLE'=>'Яркость',
+                    'PARAM_NAME'=>'action_delay_night',
+                    'PARAM_TITLE'=>LANG_DEVICES_LINK_SWITCH_TIMER_PARAM_ACTION_DELAY,
                     'PARAM_TYPE'=>'num'
                 ),
 				array(
