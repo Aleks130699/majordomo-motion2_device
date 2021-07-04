@@ -1,5 +1,6 @@
 <?php
 
+//$this->device_links['SMotions2']=$this->device_links['SMotions,SButtons,SOpenClose,SCameras'];
 $this->device_links['SMotions2']=array(
         array(
             'LINK_NAME'=>'switch_timer',
@@ -68,23 +69,23 @@ $this->device_links['SMotions2']=array(
         ),
         array(
             'LINK_NAME'=>'dimmer_timer',
-            'LINK_TITLE'=>'Установить яркость на время',
-            'LINK_DESCRIPTION'=>LANG_DEVICES_LINK_SET_COLOR_DESCRIPTION,
+            'LINK_TITLE'=>LANG_DEVICES_LINK_SET_LEVEL_TIMER,
+            'LINK_DESCRIPTION'=>LANG_DEVICES_LINK_SET_LEVEL_DESCRIPTION,
             'TARGET_CLASS'=>'SDimmers',
             'PARAMS'=>array(
                 array(
                     'PARAM_NAME'=>'action_delay',
-                    'PARAM_TITLE'=>LANG_DEVICES_LINK_SWITCH_TIMER_PARAM_ACTION_DELAY,
+                    'PARAM_TITLE'=>LANG_DEVICES_LINK_SWITCH_TIMER_PARAM_ACTION_DELAY_DAY,
                     'PARAM_TYPE'=>'num'
                 ),
 				array(
                     'PARAM_NAME'=>'action_level',
-                    'PARAM_TITLE'=>'Яркость',
+                    'PARAM_TITLE'=>LANG_DEVICES_LAMP_LEVEL,
                     'PARAM_TYPE'=>'num'
                 ),
 				array(
                     'PARAM_NAME'=>'night_mode',
-                    'PARAM_TITLE'=>'Разная яркость и время днем и ночью',
+                    'PARAM_TITLE'=>LANG_DEVICES_NIGHTMODE_LEVEL,
                     'PARAM_TYPE'=>'select',
                     'PARAM_OPTIONS'=>array(
                         array('TITLE'=>LANG_NO,'VALUE'=>'0'),
@@ -93,12 +94,12 @@ $this->device_links['SMotions2']=array(
                 ),
 				array(
                     'PARAM_NAME'=>'action_delay_night',
-                    'PARAM_TITLE'=>LANG_DEVICES_LINK_SWITCH_TIMER_PARAM_ACTION_DELAY,
+                    'PARAM_TITLE'=>LANG_DEVICES_LINK_SWITCH_TIMER_PARAM_ACTION_DELAY_NIGHT,
                     'PARAM_TYPE'=>'num'
                 ),
 				array(
                     'PARAM_NAME'=>'action_level_night',
-                    'PARAM_TITLE'=>'Яркость ночью',
+                    'PARAM_TITLE'=>LANG_DEVICES_LAMP_LEVEL_NIGHT,
                     'PARAM_TYPE'=>'num'
                 ),
                 array(
