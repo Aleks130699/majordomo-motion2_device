@@ -1,7 +1,6 @@
 <?php
 
-$this->device_links=array(
-    'SMotions2'=>array(
+$this->device_links['SMotions2']=array(
         array(
             'LINK_NAME'=>'switch_timer',
             'LINK_TITLE'=>LANG_DEVICES_LINK_SWITCH_TIMER,
@@ -113,5 +112,4 @@ $this->device_links=array(
                 )
             )
         )
-    )
-	);
+    );
