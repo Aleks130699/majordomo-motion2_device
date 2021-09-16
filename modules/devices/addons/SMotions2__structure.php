@@ -1,6 +1,7 @@
 <?php
 
-//'DEVICES_MOTION_NOBODYS' => 'Отключить изменения статуса "никого нет дома"'
+@include_once(ROOT.'languages/SMotions2_'.SETTINGS_SITE_LANGUAGE.'.php');
+@include_once(ROOT.'languages/SMotions2_default'.'.php');
 
    $this->device_types['motion2'] = array(
         'TITLE'=>LANG_DEVICES_MOTION .' 2',
@@ -20,6 +21,3 @@
             'unblockSensor'=>array('DESCRIPTION'=>LANG_UNBLOCK_SENSOR,'_CONFIG_SHOW'=>1),
         )
     );
-
-@include_once(ROOT.'languages/SMotions2_'.SETTINGS_SITE_LANGUAGE.'.php');
-@include_once(ROOT.'languages/SMotions2_default'.'.php');

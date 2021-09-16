@@ -3,14 +3,19 @@
 //$this->device_links['SMotions2']=$this->device_links['SMotions,SButtons,SOpenClose,SCameras'];
 $this->device_links['SMotions2']=array(
         array(
-            'LINK_NAME'=>'switch_timer',
+            'LINK_NAME'=>'switch_timer2',
             'LINK_TITLE'=>LANG_DEVICES_LINK_SWITCH_TIMER,
             'LINK_DESCRIPTION'=>LANG_DEVICES_LINK_SWITCH_TIMER_DESCRIPTION,
             'TARGET_CLASS'=>'SControllers',
             'PARAMS'=>array(
                 array(
                     'PARAM_NAME'=>'action_delay',
-                    'PARAM_TITLE'=>LANG_DEVICES_LINK_SWITCH_TIMER_PARAM_ACTION_DELAY,
+                    'PARAM_TITLE'=>LANG_DEVICES_LINK_SWITCH_TIMER_PARAM_ACTION_DELAY_DAY,
+                    'PARAM_TYPE'=>'num'
+                ),
+				array(
+                    'PARAM_NAME'=>'action_delay_night',
+                    'PARAM_TITLE'=>LANG_DEVICES_LINK_SWITCH_TIMER_PARAM_ACTION_DELAY_NIGHT,
                     'PARAM_TYPE'=>'num'
                 ),
                 array(
